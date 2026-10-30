@@ -8,16 +8,14 @@
   <meta property="og:title" content="Valery — Python-разработчик | AI Integration Developer">
   <meta property="og:description" content="Портфолио: Telegram-боты, AI-интеграции, Django. Открыт к предложениям.">
   <meta property="og:type" content="website">
-  <!-- Иконка сайта (встроенный SVG, можно заменить на <link rel="icon" href="favicon.png">) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233E8EFF'/%3E%3Cstop offset='1' stop-color='%237C5CFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial, sans-serif' font-size='36' font-weight='bold' fill='white' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
-  <!-- Шрифт Manrope (поддерживает кириллицу). При работе офлайн сайт корректно откатится на системные шрифты -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* ============================================================
-       ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ
+       ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ (Оригинал)
        ============================================================ */
     :root {
       --navy-900: #071120;
@@ -44,8 +42,8 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
-      scroll-behavior: smooth;        /* плавная прокрутка по якорям */
-      scroll-padding-top: 90px;       /* отступ, чтобы шапка не перекрывала заголовки */
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
@@ -61,7 +59,6 @@
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
     button { font: inherit; border: none; background: none; cursor: pointer; }
-    /* Атрибут hidden важнее авторских стилей отображения */
     [hidden] { display: none !important; }
 
     ::selection { background: rgba(62, 142, 255, .35); }
@@ -72,7 +69,6 @@
       border-radius: 4px;
     }
 
-    /* Кастомный скроллбар (WebKit) */
     ::-webkit-scrollbar { width: 10px; }
     ::-webkit-scrollbar-track { background: var(--navy-900); }
     ::-webkit-scrollbar-thumb { background: var(--navy-600); border-radius: 8px; }
@@ -126,7 +122,6 @@
 
     .btn-nav { padding: 10px 22px; font-size: .9rem; }
 
-    /* Кнопка-бургер (только мобильные) */
     .nav-toggle {
       display: none;
       flex-direction: column;
@@ -193,7 +188,6 @@
         radial-gradient(800px 500px at -10% 110%, rgba(124, 92, 255, .18), transparent 60%),
         var(--navy-800);
     }
-    /* Светящиеся "орбы" на фоне */
     .orb {
       position: absolute;
       border-radius: 50%;
@@ -338,7 +332,6 @@
       max-width: 360px;
       margin-inline: auto;
     }
-    /* Фото в градиентной рамке со скруглёнными углами */
     .photo-frame {
       padding: 6px;
       border-radius: 30px;
@@ -486,7 +479,6 @@
       box-shadow: 0 12px 26px -10px rgba(10, 25, 47, .5);
     }
 
-    /* Кнопка для закрытого репозитория: пунктирная рамка + замок */
     .btn-locked {
       background: transparent;
       border: 1.5px dashed rgba(90, 107, 140, .55);
@@ -561,7 +553,6 @@
       font-size: .88rem;
     }
 
-    /* Кнопка "наверх" */
     #to-top {
       position: fixed;
       right: 26px;
@@ -583,9 +574,6 @@
     #to-top.show { opacity: 1; visibility: visible; transform: none; }
     #to-top:hover { transform: translateY(-3px); }
 
-    /* ============================================================
-       АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ ПРОКРУТКЕ
-       ============================================================ */
     .js .reveal {
       opacity: 0;
       transform: translateY(34px);
@@ -594,16 +582,12 @@
     }
     .js .reveal.visible { opacity: 1; transform: none; }
 
-    /* Уважение к настройке "уменьшить анимацию" */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition: none !important; }
       .js .reveal { opacity: 1; transform: none; }
     }
 
-    /* ============================================================
-       АДАПТИВНОСТЬ
-       ============================================================ */
     @media (max-width: 960px) {
       .about-grid { grid-template-columns: 1fr; gap: 72px; }
       .about-photo { max-width: 300px; }
@@ -736,8 +720,6 @@
 
           <div class="about-photo reveal">
             <div class="photo-frame">
-              <!-- Ваше фото: просто положите файл 22.png рядом с index.html.
-                   Если файла нет — автоматически покажется заглушка с буквой "V". -->
               <img src="22.png" alt="Фотография — Valery, Python-разработчик"
                    onerror="this.hidden=true;document.getElementById('photo-fallback').hidden=false">
               <div class="photo-fallback" id="photo-fallback" hidden aria-hidden="true">V</div>
@@ -759,10 +741,10 @@
               «под ключ» и интеграции AI-решений.
             </p>
             <p class="reveal" style="--d:.08s">
-              Запустил Telegram-бота для реального бизнеса, который работает 24/7
-              и сократил время записи клиентов с 5 минут до 30 секунд. Имею
-              коммерческий опыт в AI-сфере, умею настраивать серверную
-              инфраструктуру и обеспечивать безопасность данных.
+              Разработал Telegram-бота для реального бизнеса, который работает 24/7 
+              и сократил время записи клиентов с 5 минут до 30 секунд. Также создал 
+              мультимодального голосового ассистента с распознаванием и синтезом речи 
+              на базе открытых нейросетей (Whisper, edge-tts).
             </p>
             <p class="reveal" style="--d:.16s">
               Ищу команду профессионалов, где смогу расти как AI-специалист.
@@ -778,7 +760,7 @@
                 <span class="stat-label">запись клиента вместо 5 минут</span>
               </div>
               <div class="stat">
-                <span class="stat-num">3+</span>
+                <span class="stat-num">4+</span>
                 <span class="stat-label">проекта — от ботов до AI</span>
               </div>
             </div>
@@ -817,10 +799,9 @@
 
         <div class="projects-grid">
 
-          <!-- Карточка 1: Telegram-бот для парикмахерской -->
+          <!-- Карточка 1: Telegram-бот для студии красоты -->
           <article class="card reveal" style="--d:0s">
             <div class="card-media">
-              <!-- Картинка-заглушка (встроенный SVG). Замените на <img src="project1.png"> со скриншотом при желании -->
               <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Иллюстрация: Telegram-бот">
                 <defs>
                   <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
@@ -851,7 +832,7 @@
               </svg>
             </div>
             <div class="card-body">
-              <h3>Telegram-бот для парикмахерской</h3>
+              <h3>Telegram-бот для студии красоты</h3>
               <p>
                 Разработал бота под ключ на Python (pyTelegramBotAPI, Flask).
                 Настроил деплой на VPS (Nginx, systemd), безопасность (152-ФЗ, UFW)
@@ -912,7 +893,6 @@
               <ul class="tags">
                 <li>Python</li><li>TTS</li><li>LLM</li><li>JSON-схемы</li><li>GitHub Actions</li><li>Репозиторий под NDA</li>
               </ul>
-              <!-- Репозиторий под NDA: кнопка ведёт в Telegram, где можно запросить доступ/демо -->
               <a class="btn btn-card btn-locked" href="https://t.me/Valery3298" target="_blank" rel="noopener" title="Репозиторий под NDA — доступ и демо по запросу в Telegram">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.3" fill="currentColor" stroke="none"/></svg>
                 Доступ по запросу
@@ -920,48 +900,53 @@
             </div>
           </article>
 
-          <!-- Карточка 3: MiniSocial (Django) -->
+          <!-- Карточка 3: AI Voice Assistant -->
           <article class="card reveal" style="--d:.2s">
             <div class="card-media">
-              <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Иллюстрация: социальная сеть MiniSocial">
+              <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Иллюстрация: Голосовой ассистент">
                 <defs>
-                  <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#0E4B74"/>
-                    <stop offset=".55" stop-color="#0C2F55"/>
-                    <stop offset="1" stop-color="#0A1D3D"/>
+                  <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#0F172A"/>
+                    <stop offset=".55" stop-color="#111827"/>
+                    <stop offset="1" stop-color="#0B1121"/>
                   </linearGradient>
-                  <linearGradient id="ac3" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#6FD0FF"/>
-                    <stop offset="1" stop-color="#3E8EFF"/>
+                  <linearGradient id="ac4" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#38BDF8"/>
+                    <stop offset="1" stop-color="#818CF8"/>
                   </linearGradient>
                 </defs>
-                <rect width="400" height="220" fill="url(#bg3)"/>
-                <circle cx="356" cy="40" r="84" fill="rgba(111,208,255,.08)"/>
-                <circle cx="40" cy="188" r="66" fill="rgba(62,142,255,.10)"/>
-                <line x1="176" y1="96" x2="224" y2="96" stroke="rgba(111,208,255,.45)" stroke-width="2" stroke-dasharray="5 7"/>
-                <circle cx="140" cy="98" r="40" fill="rgba(255,255,255,.06)" stroke="url(#ac3)" stroke-width="2.5"/>
-                <circle cx="140" cy="88" r="11" fill="url(#ac3)"/>
-                <path d="M120 116c0-11 9-17 20-17s20 6 20 17" fill="url(#ac3)"/>
-                <circle cx="260" cy="98" r="40" fill="rgba(255,255,255,.06)" stroke="url(#ac3)" stroke-width="2.5"/>
-                <circle cx="260" cy="88" r="11" fill="url(#ac3)"/>
-                <path d="M240 116c0-11 9-17 20-17s20 6 20 17" fill="url(#ac3)"/>
-                <path transform="translate(182 78) scale(1.5)" d="M12 21s-8.5-5.6-8.5-11.5A4.8 4.8 0 0 1 12 6.2a4.8 4.8 0 0 1 8.5 3.3C20.5 15.4 12 21 12 21z" fill="url(#ac3)" stroke="rgba(255,255,255,.75)" stroke-width="1.2"/>
-                <circle cx="316" cy="70" r="5" fill="rgba(111,208,255,.6)"/>
-                <circle cx="90" cy="140" r="4" fill="rgba(111,208,255,.45)"/>
+                <rect width="400" height="220" fill="url(#bg4)"/>
+                <circle cx="340" cy="40" r="80" fill="rgba(56, 189, 248, .08)"/>
+                <circle cx="60" cy="180" r="70" fill="rgba(129, 140, 248, .10)"/>
+                <g fill="url(#ac4)" opacity="0.8">
+                  <rect x="120" y="102" width="6" height="16" rx="3" opacity=".4"/>
+                  <rect x="132" y="90" width="6" height="40" rx="3" opacity=".6"/>
+                  <rect x="144" y="76" width="6" height="68" rx="3" opacity=".8"/>
+                  <rect x="156" y="60" width="6" height="100" rx="3"/>
+                  <rect x="168" y="86" width="6" height="48" rx="3" opacity=".7"/>
+                  <rect x="190" y="80" width="20" height="40" rx="10" fill="url(#ac4)"/>
+                  <path d="M185 105 a15 15 0 0 0 30 0" fill="none" stroke="url(#ac4)" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="200" y1="120" x2="200" y2="130" stroke="url(#ac4)" stroke-width="3" stroke-linecap="round"/>
+                  <rect x="218" y="86" width="6" height="48" rx="3" opacity=".7"/>
+                  <rect x="230" y="60" width="6" height="100" rx="3"/>
+                  <rect x="242" y="76" width="6" height="68" rx="3" opacity=".8"/>
+                  <rect x="254" y="90" width="6" height="40" rx="3" opacity=".6"/>
+                  <rect x="266" y="102" width="6" height="16" rx="3" opacity=".4"/>
+                </g>
+                <path transform="translate(290 150) scale(1.2)" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" fill="rgba(255,255,255,0.2)" stroke="url(#ac4)" stroke-width="1.5"/>
               </svg>
             </div>
             <div class="card-body">
-              <h3>MiniSocial (Django)</h3>
+              <h3>AI Voice Assistant (Telegram)</h3>
               <p>
-                Социальная сеть на Django. Реализовал регистрацию,
-                ленту постов, лайки (AJAX) и подписки.
+                Мультимодальный голосовой бот: работает в режимах «голос-в-текст», «текст-в-голос» и голосового диалога. Использует локальные нейросети для распознавания (Whisper) и синтеза (edge-tts) речи без затрат на сторонние API.
               </p>
               <ul class="tags">
-                <li>Python</li><li>Django</li><li>AJAX</li><li>Auth</li>
+                <li>Python</li><li>Async API</li><li>faster-whisper</li><li>edge-tts</li><li>PyAV</li>
               </ul>
-              <a class="btn btn-card" href="https://github.com/Valsw486/MyProDjango6" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.7.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
-                Посмотреть на GitHub
+              <a class="btn btn-card" href="https://github.com/Djin5926" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                Демонстрация бота
               </a>
             </div>
           </article>
@@ -1016,19 +1001,13 @@
     </div>
   </footer>
 
-  <!-- Кнопка "наверх" -->
   <button id="to-top" aria-label="Наверх">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg>
   </button>
 
-  <!-- ============================================================
-       JAVASCRIPT
-       ============================================================ -->
   <script>
     (function () {
       'use strict';
-
-      // Флаг наличия JS: анимации появления включаются только им
       document.documentElement.classList.add('js');
 
       var navbar     = document.getElementById('navbar');
@@ -1039,10 +1018,8 @@
       var navAnchors = document.querySelectorAll('.nav-link');
       var sections   = document.querySelectorAll('#about, #projects, #contacts');
 
-      // Текущий год в подвале
       if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-      /* ---------- Мобильное меню ---------- */
       function closeMenu() {
         document.body.classList.remove('nav-open');
         if (toggle) toggle.setAttribute('aria-expanded', 'false');
@@ -1060,7 +1037,6 @@
         if (e.key === 'Escape') closeMenu();
       });
 
-      /* ---------- Плавная прокрутка (с учётом высоты шапки) ---------- */
       document.querySelectorAll('a[href^="#"]').forEach(function (a) {
         a.addEventListener('click', function (e) {
           var id = a.getAttribute('href');
@@ -1075,7 +1051,6 @@
         });
       });
 
-      /* ---------- Шапка, кнопка "наверх", активный пункт меню ---------- */
       function highlight() {
         var y = window.pageYOffset;
         var current = '';
@@ -1100,7 +1075,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
-      /* ---------- Появление блоков при прокрутке ---------- */
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (en) {
