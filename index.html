@@ -14,9 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* ============================================================
-       ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ (Оригинал)
-       ============================================================ */
     :root {
       --navy-900: #071120;
       --navy-800: #0A192F;
@@ -76,9 +73,6 @@
 
     .container { width: min(1120px, 92%); margin-inline: auto; }
 
-    /* ============================================================
-       ШАПКА / НАВИГАЦИЯ
-       ============================================================ */
     .navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -139,9 +133,6 @@
     body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
     body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
-    /* ============================================================
-       КНОПКИ
-       ============================================================ */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -172,9 +163,6 @@
       color: var(--white);
     }
 
-    /* ============================================================
-       ГЛАВНЫЙ ЭКРАН (HERO)
-       ============================================================ */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -279,9 +267,6 @@
       50%      { transform: translate(-50%, 9px); }
     }
 
-    /* ============================================================
-       СЕКЦИИ (ОБЩЕЕ)
-       ============================================================ */
     .section { padding: 110px 0; }
     .section-light { background: var(--white); }
     .section-tint  { background: var(--bg-light); }
@@ -316,9 +301,6 @@
     }
     .section-sub { color: var(--muted-dark); margin-top: 14px; font-size: 1.03rem; }
 
-    /* ============================================================
-       БЛОК "ОБО МНЕ"
-       ============================================================ */
     .about-grid {
       display: grid;
       grid-template-columns: 360px 1fr;
@@ -420,9 +402,6 @@
       transform: translateY(-2px);
     }
 
-    /* ============================================================
-       БЛОК "МОИ ПРОЕКТЫ"
-       ============================================================ */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -492,9 +471,6 @@
       box-shadow: 0 12px 26px -10px rgba(10, 25, 47, .5);
     }
 
-    /* ============================================================
-       ПОДВАЛ / КОНТАКТЫ
-       ============================================================ */
     .footer {
       background:
         radial-gradient(700px 400px at 50% 0, rgba(62, 142, 255, .15), transparent 70%),
@@ -647,9 +623,6 @@
 </head>
 <body>
 
-  <!-- ============================================================
-       ШАПКА / НАВИГАЦИЯ
-       ============================================================ -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#hero" class="logo">Valery<span class="logo-dot">.</span></a>
@@ -668,10 +641,6 @@
   </header>
 
   <main>
-
-    <!-- ============================================================
-         ГЛАВНЫЙ ЭКРАН
-         ============================================================ -->
     <section class="hero" id="hero">
       <div class="orb orb-1" aria-hidden="true"></div>
       <div class="orb orb-2" aria-hidden="true"></div>
@@ -711,9 +680,6 @@
       </a>
     </section>
 
-    <!-- ============================================================
-         ОБО МНЕ
-         ============================================================ -->
     <section class="section section-light" id="about">
       <div class="container">
         <div class="about-grid">
@@ -783,9 +749,6 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         МОИ ПРОЕКТЫ
-         ============================================================ -->
     <section class="section section-tint" id="projects">
       <div class="container">
         <div class="section-head">
@@ -944,9 +907,9 @@
               <ul class="tags">
                 <li>Python</li><li>Async API</li><li>faster-whisper</li><li>edge-tts</li><li>PyAV</li>
               </ul>
-              <a class="btn btn-card" href="https://github.com/Djin5926" target="_blank" rel="noopener">
+              <a class="btn btn-card" href="https://t.me/djin_voice_tts_bot" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                Демонстрация бота
+                Попробовать бота в Telegram
               </a>
             </div>
           </article>
@@ -954,12 +917,8 @@
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ============================================================
-       ПОДВАЛ / КОНТАКТЫ
-       ============================================================ -->
   <footer class="footer" id="contacts">
     <div class="container">
       <div class="section-head center">
