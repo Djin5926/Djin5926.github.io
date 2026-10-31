@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Valery — Python-разработчик | AI Integration Developer</title>
-  <meta name="description" content="Портфолио Valery: Telegram-боты под ключ, RAG-системы, интеграция AI-решений (TTS, LLM). Открыт к предложениям.">
+  <meta name="description" content="Портфолио Valery: RAG-системы, локальные нейросети (Ollama), Telegram-боты под ключ. Безопасность данных и минимизация затрат на API.">
   <meta property="og:title" content="Valery — Python-разработчик | AI Integration Developer">
-  <meta property="og:description" content="Портфолио: Telegram-боты, RAG-системы, AI-интеграции. Открыт к предложениям.">
+  <meta property="og:description" content="Портфолио: RAG-системы, локальный ИИ, Telegram-боты. Открыт к предложениям.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233E8EFF'/%3E%3Cstop offset='1' stop-color='%237C5CFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial, sans-serif' font-size='36' font-weight='bold' fill='white' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,28 +14,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    /* Стили остаются без изменений */
     :root {
-      --navy-900: #071120;
-      --navy-800: #0A192F;
-      --navy-700: #0E2140;
-      --navy-600: #15305B;
-      --white: #FFFFFF;
-      --bg-light: #F4F7FD;
-      --text-dark: #132441;
-      --muted-dark: #5A6B8C;
-      --text-light: #E9F0FC;
-      --muted-light: #9DB0D4;
-      --accent: #3E8EFF;
-      --accent-2: #6FB3FF;
-      --violet: #7C5CFF;
-      --grad: linear-gradient(120deg, #3E8EFF 0%, #7C5CFF 100%);
-      --radius: 18px;
-      --shadow-1: 0 6px 20px rgba(10, 25, 47, .08);
-      --shadow-2: 0 24px 48px -12px rgba(10, 25, 47, .18);
+      --navy-900: #071120; --navy-800: #0A192F; --navy-700: #0E2140; --navy-600: #15305B;
+      --white: #FFFFFF; --bg-light: #F4F7FD; --text-dark: #132441; --muted-dark: #5A6B8C;
+      --text-light: #E9F0FC; --muted-light: #9DB0D4; --accent: #3E8EFF; --accent-2: #6FB3FF;
+      --violet: #7C5CFF; --grad: linear-gradient(120deg, #3E8EFF 0%, #7C5CFF 100%);
+      --radius: 18px; --shadow-1: 0 6px 20px rgba(10, 25, 47, .08); --shadow-2: 0 24px 48px -12px rgba(10, 25, 47, .18);
       --shadow-glow: 0 10px 30px -6px rgba(62, 142, 255, .45);
       --font: 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: 90px; }
     body { font-family: var(--font); background: var(--navy-800); color: var(--text-dark); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
@@ -50,13 +38,8 @@
     ::-webkit-scrollbar-track { background: var(--navy-900); }
     ::-webkit-scrollbar-thumb { background: var(--navy-600); border-radius: 8px; }
     ::-webkit-scrollbar-thumb:hover { background: #1D4279; }
-
     .container { width: min(1120px, 92%); margin-inline: auto; }
-
-    .navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 120; padding: 18px 0;
-      transition: background .35s, box-shadow .35s, padding .35s;
-    }
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 120; padding: 18px 0; transition: background .35s, box-shadow .35s, padding .35s; }
     .navbar.scrolled { background: rgba(7, 17, 32, .84); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .5); padding: 12px 0; }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .logo { font-size: 1.45rem; font-weight: 800; color: var(--white); letter-spacing: .3px; }
@@ -72,21 +55,18 @@
     body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
     body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
     body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; border-radius: 14px; font-weight: 700; font-size: .95rem; border: 1px solid transparent; transition: transform .3s, box-shadow .3s, background .3s, border-color .3s, color .3s; will-change: transform; }
     .btn svg { width: 19px; height: 19px; flex: none; }
     .btn-primary { background: var(--grad); color: var(--white); box-shadow: var(--shadow-glow); }
     .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 38px -8px rgba(80, 120, 255, .55); }
     .btn-ghost { background: rgba(255, 255, 255, .05); color: #DCE8FF; border-color: rgba(147, 165, 200, .3); }
     .btn-ghost:hover { transform: translateY(-3px); background: rgba(255, 255, 255, .1); border-color: rgba(111, 179, 255, .6); color: var(--white); }
-
     .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding: 150px 0 110px; overflow: hidden; background: radial-gradient(1000px 600px at 80% -10%, rgba(60, 90, 180, .35), transparent 60%), radial-gradient(800px 500px at -10% 110%, rgba(124, 92, 255, .18), transparent 60%), var(--navy-800); }
     .orb { position: absolute; border-radius: 50%; filter: blur(100px); opacity: .45; pointer-events: none; animation: float 14s ease-in-out infinite; }
     .orb-1 { width: 420px; height: 420px; background: #1E4FD8; top: -120px; right: -80px; }
     .orb-2 { width: 340px; height: 340px; background: #7C5CFF; bottom: -120px; left: -100px; animation-delay: -5s; }
     .orb-3 { width: 220px; height: 220px; background: #0E7FE8; top: 40%; left: 55%; opacity: .25; animation-delay: -9s; }
     @keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(30px, -30px) scale(1.08); } }
-
     .hero-inner { position: relative; z-index: 2; max-width: 840px; }
     .hero-badge { display: inline-flex; align-items: center; gap: 9px; padding: 8px 18px; border: 1px solid rgba(111, 179, 255, .35); background: rgba(62, 142, 255, .1); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: var(--accent-2); border-radius: 100px; font-size: .85rem; font-weight: 600; margin-bottom: 28px; }
     .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #38E1A8; box-shadow: 0 0 0 0 rgba(56, 225, 168, .6); animation: pulse 2s infinite; }
@@ -100,7 +80,6 @@
     .scroll-hint { position: absolute; left: 50%; bottom: 28px; color: var(--muted-light); z-index: 2; animation: bob 2.2s ease-in-out infinite; }
     .scroll-hint svg { width: 26px; height: 26px; display: block; }
     @keyframes bob { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 9px); } }
-
     .section { padding: 110px 0; }
     .section-light { background: var(--white); }
     .section-tint { background: var(--bg-light); }
@@ -110,7 +89,6 @@
     .section-tag::before { content: ''; width: 34px; height: 2px; background: var(--grad); border-radius: 2px; }
     h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 800; letter-spacing: -.5px; line-height: 1.15; color: var(--text-dark); }
     .section-sub { color: var(--muted-dark); margin-top: 14px; font-size: 1.03rem; }
-
     .about-grid { display: grid; grid-template-columns: 360px 1fr; gap: 64px; align-items: center; }
     .about-photo { position: relative; width: 100%; max-width: 360px; margin-inline: auto; }
     .photo-frame { padding: 6px; border-radius: 30px; background: var(--grad); box-shadow: var(--shadow-2); }
@@ -129,7 +107,6 @@
     .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
     .chips li { padding: 8px 16px; background: rgba(62, 142, 255, .08); border: 1px solid rgba(62, 142, 255, .25); color: #2A6AD1; border-radius: 100px; font-size: .85rem; font-weight: 700; transition: background .3s, color .3s, transform .3s, border-color .3s; cursor: default; }
     .chips li:hover { background: var(--grad); color: var(--white); border-color: transparent; transform: translateY(-2px); }
-
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
     .card { background: var(--white); border: 1px solid #E4EAF5; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-1); transition: transform .4s cubic-bezier(.2, .7, .3, 1), box-shadow .4s; }
     .card:hover { transform: translateY(-10px); box-shadow: var(--shadow-2); }
@@ -145,7 +122,6 @@
     .btn-card:hover { background: var(--navy-600); transform: translateY(-2px); box-shadow: 0 12px 26px -10px rgba(10, 25, 47, .5); }
     .btn-locked { background: transparent; border: 1.5px dashed rgba(90, 107, 140, .55); color: var(--muted-dark); }
     .btn-locked:hover { background: var(--navy-800); border-color: transparent; color: var(--white); transform: translateY(-2px); box-shadow: 0 12px 26px -10px rgba(10, 25, 47, .5); }
-
     .footer { background: radial-gradient(700px 400px at 50% 0, rgba(62, 142, 255, .15), transparent 70%), var(--navy-900); padding: 110px 0 0; color: var(--muted-light); }
     .footer h2 { color: var(--white); }
     .footer .section-tag { color: var(--accent-2); }
@@ -159,12 +135,10 @@
     .contact-info b { display: block; color: var(--white); font-size: 1rem; }
     .contact-info span { font-size: .88rem; word-break: break-all; }
     .footer-bottom { border-top: 1px solid rgba(147, 165, 200, .14); padding: 26px 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: .88rem; }
-
     #to-top { position: fixed; right: 26px; bottom: 26px; width: 48px; height: 48px; border-radius: 14px; background: var(--grad); color: var(--white); display: grid; place-items: center; box-shadow: var(--shadow-glow); opacity: 0; visibility: hidden; transform: translateY(14px); transition: opacity .35s, transform .35s, visibility .35s; z-index: 90; }
     #to-top svg { width: 22px; height: 22px; }
     #to-top.show { opacity: 1; visibility: visible; transform: none; }
     #to-top:hover { transform: translateY(-3px); }
-
     .js .reveal { opacity: 0; transform: translateY(34px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .65, .3, 1); transition-delay: var(--d, 0s); }
     .js .reveal.visible { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } .js .reveal { opacity: 1; transform: none; } }
@@ -199,11 +173,15 @@
       <div class="orb orb-3" aria-hidden="true"></div>
       <div class="container hero-inner">
         <span class="hero-badge reveal" style="--d:0s"><span class="pulse-dot"></span>Открыт к предложениям</span>
+        
         <h1 class="reveal" style="--d:.08s">Привет, я <span class="grad-text">Valery</span></h1>
+        
         <p class="hero-role reveal" style="--d:.16s">Python-разработчик <span class="role-sep">|</span> AI Integration Developer</p>
+        
         <p class="hero-desc reveal" style="--d:.24s">
-          Создаю проекты «под ключ» и интегрирую AI-решения: от Telegram-ботов и RAG-систем для реального бизнеса до TTS-платформ. Беру задачу на старте и довожу её до продакшна.
+          Создаю сложные AI-системы «под ключ»: от локальных RAG-ассистентов для безопасной работы с документами до мультимодальных голосовых ботов. Проектирую архитектуру, обеспечивая конфиденциальность данных (152-ФЗ) и минимизируя затраты на API.
         </p>
+        
         <div class="hero-actions reveal" style="--d:.32s">
           <a class="btn btn-primary" href="https://t.me/Valery3298" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
@@ -241,29 +219,25 @@
           <div class="about-text">
             <div class="section-head">
               <p class="section-tag">01 · Обо мне</p>
-              <h2>Разработчик, который доводит проект до продакшна</h2>
+              <h2>Разработчик, который строит сложные AI-архитектуры</h2>
             </div>
             <p class="lead reveal">
-              Привет! Я Python-разработчик, специализируюсь на создании проектов
-              «под ключ» и интеграции AI-решений.
+              Привет! Я Python-разработчик, специализируюсь на создании проектов «под ключ» и интеграции AI-решений. 
             </p>
             <p class="reveal" style="--d:.08s">
-              Разработал Telegram-бота для реального бизнеса, который работает 24/7 
-              и сократил время записи клиентов с 5 минут до 30 секунд. Также создал 
-              мультимодального голосового ассистента и RAG-систему для анализа PDF-документов 
-              с локальной нейросетью (Ollama).
+              Моя главная специализация — <strong>локальные нейросети и RAG-системы</strong>. Я спроектировал AI-ассистента для анализа PDF-документов, работающего полностью на базе Ollama (без внешних API). Это гарантирует 100% конфиденциальность данных заказчика и нулевые затраты на токены.
             </p>
             <p class="reveal" style="--d:.16s">
-              Ищу команду профессионалов, где смогу расти как AI-специалист.
+              Также имею опыт разработки мультимодальных голосовых ботов (Whisper + TTS) и коммерческих Telegram-ботов с полной автоматизацией бизнес-процессов. Ищу команду или проект, где смогу применить свои навыки в создании AI-продуктов.
             </p>
             <div class="about-stats reveal" style="--d:.2s">
               <div class="stat">
-                <span class="stat-num">24/7</span>
-                <span class="stat-label">работает мой Telegram-бот</span>
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Конфиденциальность (Локальный ИИ)</span>
               </div>
               <div class="stat">
-                <span class="stat-num">30 сек</span>
-                <span class="stat-label">запись клиента вместо 5 минут</span>
+                <span class="stat-num">0 ₽</span>
+                <span class="stat-label">Затраты на API (Ollama)</span>
               </div>
               <div class="stat">
                 <span class="stat-num">5+</span>
@@ -272,15 +246,14 @@
             </div>
             <ul class="chips reveal" style="--d:.28s">
               <li>Python</li>
-              <li>aiogram 3</li>
-              <li>Docker</li>
-              <li>Qdrant</li>
-              <li>PostgreSQL</li>
               <li>Ollama (Local AI)</li>
               <li>RAG</li>
-              <li>LLM &amp; JSON-схемы</li>
+              <li>Qdrant</li>
+              <li>Docker</li>
+              <li>aiogram 3</li>
+              <li>PostgreSQL</li>
+              <li>PyMuPDF</li>
               <li>Linux / VPS</li>
-              <li>CI/CD</li>
             </ul>
           </div>
         </div>
@@ -293,8 +266,7 @@
           <p class="section-tag">02 · Проекты</p>
           <h2>Мои проекты</h2>
           <p class="section-sub">
-            Реальные задачи, которые я решил: автоматизация бизнеса,
-            AI-интеграции и веб-разработка.
+            Реальные задачи, которые я решил: от сложных AI-архитектур до автоматизации бизнеса.
           </p>
         </div>
         <div class="projects-grid">
@@ -315,15 +287,12 @@
                   </linearGradient>
                 </defs>
                 <rect width="400" height="220" fill="url(#bg_rag)"/>
-                <!-- Документ -->
                 <rect x="110" y="50" width="120" height="140" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(56,189,248,0.4)" stroke-width="2"/>
                 <line x1="130" y1="80" x2="210" y2="80" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-linecap="round"/>
                 <line x1="130" y1="100" x2="190" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-linecap="round"/>
                 <line x1="130" y1="120" x2="200" y2="120" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-linecap="round"/>
-                <!-- Желтая подсветка -->
                 <rect x="125" y="135" width="90" height="15" rx="4" fill="rgba(250,204,21,0.4)"/>
                 <line x1="130" y1="150" x2="200" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-linecap="round"/>
-                <!-- Нейросеть / Лупа -->
                 <circle cx="260" cy="110" r="40" fill="none" stroke="url(#ac_rag)" stroke-width="4"/>
                 <line x1="290" y1="140" x2="330" y2="180" stroke="url(#ac_rag)" stroke-width="6" stroke-linecap="round"/>
                 <circle cx="250" cy="100" r="4" fill="#38BDF8"/>
@@ -349,57 +318,8 @@
             </div>
           </article>
 
-          <!-- Карточка 2: Telegram-бот для студии красоты -->
+          <!-- Карточка 2: AI Voice Assistant -->
           <article class="card reveal" style="--d:.1s">
-            <div class="card-media">
-              <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Иллюстрация: Telegram-бот">
-                <defs>
-                  <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#14417F"/>
-                    <stop offset=".55" stop-color="#0C2C5C"/>
-                    <stop offset="1" stop-color="#081B38"/>
-                  </linearGradient>
-                  <linearGradient id="ac1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#6FB3FF"/>
-                    <stop offset="1" stop-color="#3E8EFF"/>
-                  </linearGradient>
-                </defs>
-                <rect width="400" height="220" fill="url(#bg1)"/>
-                <circle cx="352" cy="30" r="90" fill="rgba(111,179,255,.08)"/>
-                <circle cx="36" cy="196" r="70" fill="rgba(124,92,255,.10)"/>
-                <rect x="118" y="48" width="164" height="104" rx="24" fill="rgba(255,255,255,.06)" stroke="rgba(111,179,255,.55)" stroke-width="2"/>
-                <path d="M156 150l-8 24 28-22z" fill="rgba(255,255,255,.06)" stroke="rgba(111,179,255,.55)" stroke-width="2" stroke-linejoin="round"/>
-                <circle cx="200" cy="60" r="5" fill="url(#ac1)"/>
-                <line x1="200" y1="65" x2="200" y2="78" stroke="url(#ac1)" stroke-width="3"/>
-                <circle cx="200" cy="104" r="26" fill="url(#ac1)"/>
-                <circle cx="191" cy="102" r="4.5" fill="#0A192F"/>
-                <circle cx="209" cy="102" r="4.5" fill="#0A192F"/>
-                <path d="M193 112h14" stroke="#0A192F" stroke-width="3" stroke-linecap="round"/>
-                <circle cx="288" cy="66" r="4" fill="rgba(111,179,255,.7)"/>
-                <circle cx="302" cy="66" r="4" fill="rgba(111,179,255,.45)"/>
-                <circle cx="316" cy="66" r="4" fill="rgba(111,179,255,.25)"/>
-                <path d="M292 154l46-18-46-18v14l32 4-32 4z" fill="url(#ac1)"/>
-              </svg>
-            </div>
-            <div class="card-body">
-              <h3>Telegram-бот для студии красоты</h3>
-              <p>
-                Разработал бота под ключ на Python (pyTelegramBotAPI, Flask).
-                Настроил деплой на VPS (Nginx, systemd), безопасность (152-ФЗ, UFW)
-                и резервное копирование. Бот автоматизировал запись клиентов.
-              </p>
-              <ul class="tags">
-                <li>Python</li><li>pyTelegramBotAPI</li><li>Flask</li><li>Nginx</li><li>systemd</li>
-              </ul>
-              <a class="btn btn-card" href="https://github.com/Djin5926/parik-bot" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.7.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
-                Посмотреть на GitHub
-              </a>
-            </div>
-          </article>
-
-          <!-- Карточка 3: AI Voice Assistant -->
-          <article class="card reveal" style="--d:.2s">
             <div class="card-media">
               <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Иллюстрация: Голосовой ассистент">
                 <defs>
@@ -445,6 +365,55 @@
               <a class="btn btn-card" href="https://t.me/djin_voice_tts_bot" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                 Попробовать бота в Telegram
+              </a>
+            </div>
+          </article>
+
+          <!-- Карточка 3: Telegram-бот для студии красоты -->
+          <article class="card reveal" style="--d:.2s">
+            <div class="card-media">
+              <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Иллюстрация: Telegram-бот">
+                <defs>
+                  <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#14417F"/>
+                    <stop offset=".55" stop-color="#0C2C5C"/>
+                    <stop offset="1" stop-color="#081B38"/>
+                  </linearGradient>
+                  <linearGradient id="ac1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#6FB3FF"/>
+                    <stop offset="1" stop-color="#3E8EFF"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="220" fill="url(#bg1)"/>
+                <circle cx="352" cy="30" r="90" fill="rgba(111,179,255,.08)"/>
+                <circle cx="36" cy="196" r="70" fill="rgba(124,92,255,.10)"/>
+                <rect x="118" y="48" width="164" height="104" rx="24" fill="rgba(255,255,255,.06)" stroke="rgba(111,179,255,.55)" stroke-width="2"/>
+                <path d="M156 150l-8 24 28-22z" fill="rgba(255,255,255,.06)" stroke="rgba(111,179,255,.55)" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="200" cy="60" r="5" fill="url(#ac1)"/>
+                <line x1="200" y1="65" x2="200" y2="78" stroke="url(#ac1)" stroke-width="3"/>
+                <circle cx="200" cy="104" r="26" fill="url(#ac1)"/>
+                <circle cx="191" cy="102" r="4.5" fill="#0A192F"/>
+                <circle cx="209" cy="102" r="4.5" fill="#0A192F"/>
+                <path d="M193 112h14" stroke="#0A192F" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="288" cy="66" r="4" fill="rgba(111,179,255,.7)"/>
+                <circle cx="302" cy="66" r="4" fill="rgba(111,179,255,.45)"/>
+                <circle cx="316" cy="66" r="4" fill="rgba(111,179,255,.25)"/>
+                <path d="M292 154l46-18-46-18v14l32 4-32 4z" fill="url(#ac1)"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Telegram-бот для студии красоты</h3>
+              <p>
+                Разработал бота под ключ на Python (pyTelegramBotAPI, Flask).
+                Настроил деплой на VPS (Nginx, systemd), безопасность (152-ФЗ, UFW)
+                и резервное копирование. Бот автоматизировал запись клиентов.
+              </p>
+              <ul class="tags">
+                <li>Python</li><li>pyTelegramBotAPI</li><li>Flask</li><li>Nginx</li><li>systemd</li>
+              </ul>
+              <a class="btn btn-card" href="https://github.com/Djin5926/parik-bot" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.7.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+                Посмотреть на GitHub
               </a>
             </div>
           </article>
