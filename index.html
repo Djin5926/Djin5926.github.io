@@ -385,10 +385,12 @@
             <div class="card-body">
               <h3>AI Voice Assistant (Telegram)</h3>
               <p>
-                Мультимодальный голосовой бот: работает в режимах «голос-в-текст», «текст-в-голос» и голосового диалога. Использует локальные нейросети для распознавания (Whisper) и синтеза (edge-tts) речи.
+                Мультимодальный голосовой бот (голос-в-текст и текст-в-голос). <strong>Ключевое решение:</strong> после того как в октябре 2026 года Microsoft ужесточила политику безопасности и заблокировала запросы облачного TTS, бот был полностью переведен на локальные нейросети <strong>Silero TTS</strong> и <strong>Whisper</strong>. 
+                <br><br>
+                Это обеспечило 100% стабильность работы, нулевые затраты на API и полную конфиденциальность данных (текст не покидает сервер). Реализован выбор голосов, умный стриминг статусов обработки и удобное меню.
               </p>
               <ul class="tags">
-                <li>Python</li><li>Async API</li><li>faster-whisper</li><li>edge-tts</li><li>PyAV</li>
+                <li>Python</li><li>Offline AI</li><li>faster-whisper</li><li>Silero TTS</li><li>PyTorch</li><li>aiogram 3</li>
               </ul>
               <!-- 👇 Ссылка изменена на протокол tg:// -->
               <a class="btn btn-card" href="tg://resolve?domain=djin_voice_tts_bot" target="_blank" rel="noopener">
